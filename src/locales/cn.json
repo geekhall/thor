@@ -1,0 +1,11 @@
+{
+  "sitename": "Thor",
+  "title": "Thor",
+  "header": {
+    "login": "登录",
+    "home": "首页",
+    "about": "关于",
+    "logout": "退出",
+    "content": "I18n 示例页面"
+  }
+}

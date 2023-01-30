@@ -1,0 +1,11 @@
+{
+  "sitename": "Thor",
+  "title": "Thor",
+  "header": {
+    "login": "Login",
+    "home": "Home",
+    "about": "About",
+    "logout": "Logout",
+    "content": "I18n sample page."
+  }
+}
