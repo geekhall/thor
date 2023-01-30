@@ -26,7 +26,6 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import axios from 'axios'
-import { useStore } from 'vuex'
 
 interface ILocalEnvironment {
   id: number
@@ -73,7 +72,6 @@ const getProducts = async () => {
       console.log(err.message)
     })
 }
-const store = useStore()
 const random_color = () => {
   return title_color[Math.floor(Math.random() * title_color.length)]
 }
