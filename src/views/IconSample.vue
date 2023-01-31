@@ -34,5 +34,5 @@
 <script setup lang="ts">
 </script>
 
-<style lang="sass" scoped>
+<style lang="less" scoped>
 </style>

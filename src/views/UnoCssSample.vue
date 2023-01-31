@@ -13,8 +13,9 @@
 <script setup lang="ts">
 </script>
 
-<style lang="sass" scoped>
-.box
-  width: 100px
-  height: 100px
+<style lang="less" scoped>
+.box {
+  width: 100px;
+  height: 100px;
+}
 </style>

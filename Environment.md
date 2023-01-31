@@ -207,7 +207,7 @@ import { defineStore } from 'pinia'
 const mainStore = defineStore('main', {
   state: () => ({
     count: 0,
-    name: 'Odin',
+    name: 'Thor',
   }),
   getters: {
     doubleCount: (state) => state.count * 2,

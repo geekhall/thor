@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { isDark, toggleDark } from "~/composables";
+import { isDark, toggleDark } from '~/composables'
 </script>
 
 <style lang="less" scoped>

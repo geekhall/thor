@@ -4,7 +4,6 @@ import type { App } from 'vue'
 // 1. Define route components.
 const Home = () => import('../views/Home.vue')
 const About = () => import('../views/About.vue')
-const HelloWorld = () => import('../components/HelloWorld.vue')
 const AxiosSample = () => import('../views/AxiosSample.vue')
 const VueUseSample = () => import('../views/VueUseSample.vue')
 const I18nSample = () => import('../views/I18nSample.vue')
@@ -17,7 +16,6 @@ const IconSample = () => import('../views/IconSample.vue')
 const routes = [
   { path: '/', name: "home", component: Home },
   { path: '/about', name: "about", component: About },
-  { path: '/hello', name: "hello", component: HelloWorld },
   { path: '/axios', name: "axiosSample", component: AxiosSample },
   { path: '/vueuse', name: "vueuseSample", component: VueUseSample },
   { path: '/i18n', name: "i18nSample", component: I18nSample },

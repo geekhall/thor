@@ -18,7 +18,7 @@ const increase = () => store.increment()
 const decrease = () => store.decrement()
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .counter {
   width: 100%;
   height: 100px;
