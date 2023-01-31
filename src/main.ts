@@ -12,6 +12,7 @@ import store from './store'           // 引入Pinia
 import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n' // 引入vue-i18n，用于国际化
 import messages from "@intlify/unplugin-vue-i18n/messages";
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from './App.vue'
 const app = createApp(App)
 
@@ -34,6 +35,11 @@ const i18n = createI18n({
   messages: messages, // set locale messages
 });
 app.use(i18n)
+
+//从 @element-plus/icons-vue 中导入所有图标并进行全局注册。
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
 
 //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 // mount

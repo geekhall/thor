@@ -886,8 +886,60 @@ export default defineConfig({
   </div>
 </template>
 
+## 14. 安装使用vite-svg-loader
+
+### 14.1 安装
+
+```bash
+pnpm i -D vite-svg-loader
+```
+
+### 14.2 配置
+
+```ts
+// vite.config.ts
+import svgLoader from 'vite-svg-loader'
+export default defineConfig({
+  plugins: [
+    // ...
+    svgLoader(),
+  ],
+});
+```
+
+现在就可以以组件的形式导入svg文件，url或者raw-data了，
+这里编写一个icon组件统一管理svg图标
+
+```vue
+<template>
+  <component :is="icon" class="fill-current" />
+</template>
+
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { defineAsyncComponent } from 'vue'
+
+const props = defineProps({
+  name: {
+    type: String,
+    required: true
+  }
+})
+
+const icon = defineAsyncComponent(() => import(`~/assets/svg/${props.name}.svg`))
+</script>
+
+<style lang="less" scoped>
+</style>
 
 ```
+### 14.3 使用
+
+```vue
+<icon name="ep-home-1"></icon>
+<icon name="ep-home-1-door-1"></icon>
+```
+
 ### 启动环境
 
 ```bash
