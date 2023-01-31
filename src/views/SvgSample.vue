@@ -3,13 +3,10 @@
   <hr />
   <div class="container">
     <div class="title2">1. Use epIcons svg</div>
-    <div class="content">
-      <icon name="ep-mic"></icon>
-      <icon name="ep-home-1"></icon>
-      <icon name="ep-home-1-door-1"></icon>
-
-      <div class="home1"></div>
-    </div>
+    <div class="home1"></div>
+    <icon name="ep-home-1"></icon>
+    <icon name="ep-home-1-door-solid"></icon>
+    <icon name="ep-home-1-door-1"></icon>
 
     <div class="title2">2. Use www.iconfont.cn</div>
     <p>
@@ -66,6 +63,20 @@ import { Ticket } from '@element-plus/icons-vue'
 import { ref } from 'vue'
 const editColor = ref('#e83960')
 const ticketSize = ref(50)
+const buildingSvgs = [
+  { name: 'home-1' },
+  { name: 'home-1-strip' },
+  { name: 'home-1-strip-solid' },
+  { name: 'home-1-solid' },
+  { name: 'home-1-smile' },
+  { name: 'home-1-smile-solid' },
+  { name: 'home-1-line' },
+  { name: 'home-1-line-solid' },
+  { name: 'home-1-door' },
+  { name: 'home-1-door-solid' },
+  { name: 'home-1-door-solid-1' },
+  { name: 'home-1-door-1' }
+]
 </script>
 
 <style lang="less" scoped>
