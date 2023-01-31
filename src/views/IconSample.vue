@@ -58,93 +58,95 @@
     <hr />
     <p>Icons list</p>
     <div class="icon-container">
-      <div class="title2">System</div>
-      <el-row>
-        <el-col v-for="(item, index) in systemIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="icon-title">System</div>
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in systemIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
+
       <div class="title2">Arrow</div>
-      <el-row>
-        <el-col v-for="(item, index) in arrowIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in arrowIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Document</div>
-      <el-row>
-        <el-col v-for="(item, index) in documentIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in documentIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Media</div>
-      <el-row>
-        <el-col v-for="(item, index) in mediaIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in mediaIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Traffic</div>
-      <el-row>
-        <el-col v-for="(item, index) in trafficIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in trafficIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Food</div>
-      <el-row>
-        <el-col v-for="(item, index) in foodIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in foodIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Items</div>
-      <el-row>
-        <el-col v-for="(item, index) in foodIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in itemIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
 
       <div class="title2">Weather</div>
-      <el-row>
-        <el-col v-for="(item, index) in foodIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in weatherIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
+
       <div class="title2">Other</div>
-      <el-row>
-        <el-col v-for="(item, index) in otherIcons" :key="index + ''" :span="4">
-          <el-card shadow="hover"
+      <div class="container">
+        <div class="icon-content" v-for="(item, index) in otherIcons" :key="index + ''">
+          <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
             <div class="icon-name">{{ item.name }}</div>
           </el-card>
-        </el-col>
-      </el-row>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -278,7 +280,6 @@ const arrowIcons = [
   { name: 'Expand', icon: 'Expand' },
   { name: 'Fold', icon: 'Fold' }
 ]
-
 const documentIcons = [
   { name: 'DocumentAdd', icon: 'DocumentAdd' },
   { name: 'Document', icon: 'Document' },
@@ -313,7 +314,6 @@ const documentIcons = [
   { name: 'TrendCharts', icon: 'TrendCharts' },
   { name: 'List', icon: 'List' }
 ]
-
 const mediaIcons = [
   { name: 'Microphone', icon: 'Microphone' },
   { name: 'Mute', icon: 'Mute' },
@@ -350,7 +350,6 @@ const trafficIcons = [
   { name: 'LocationFilled', icon: 'LocationFilled' },
   { name: 'Van', icon: 'Van' }
 ]
-
 const foodIcons = [
   { name: 'Watermelon', icon: 'Watermelon' },
   { name: 'Pear', icon: 'Pear' },
@@ -446,7 +445,6 @@ const itemIcons = [
   { name: 'Briefcase', icon: 'Briefcase' },
   { name: 'Stamp', icon: 'Stamp' }
 ]
-
 const weatherIcons = [
   { name: 'Sunrise', icon: 'Sunrise' },
   { name: 'Sunny', icon: 'Sunny' },
@@ -494,11 +492,22 @@ const otherIcons = [
   flex-direction: column;
   align-items: flex-start;
 }
-.title2 {
+.icon-title {
   font-size: 24px;
   font-weight: bold;
   margin: 24px 0;
   float: left;
+}
+.icon-content {
+  margin: 0.5rem;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  flex-wrap: wrap;
 }
 .icon-container {
   display: flex;
@@ -524,4 +533,9 @@ const otherIcons = [
     margin-top: 12px;
   }
 }
+.box {
+  width: 100px;
+  height: 100px;
+}
 </style>
+
