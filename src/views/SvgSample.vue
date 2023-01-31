@@ -12,7 +12,9 @@
     </div>
 
     <div class="title2">2. Use www.iconfont.cn</div>
-    <p>访问iconfont，搜索想要的图标，然后直接下载使用svg即可。</p>
+    <p>
+      访问iconfont，搜索想要的图标，然后直接下载使用svg即可。可以修改svg中的width、height、fill来修改大小和颜色
+    </p>
     <svg
       t="1675149728931"
       class="icon"

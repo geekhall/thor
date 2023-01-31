@@ -6,7 +6,7 @@
   <div class="i-ep-lock"></div>
   <i-ep-edit />
   <i-ep-search></i-ep-search>
-  <div style="margin: 50px">
+  <div style="width: 100%">
     <el-space direction="vertical" alignment="left">
       <!-- 直接使用 -->
       <el-space>
@@ -58,8 +58,8 @@
     <hr />
     <p>Icons list</p>
     <div class="icon-container">
-      <div class="icon-title">System</div>
-      <div class="container">
+      <div class="sub-title">System</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in systemIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -68,8 +68,8 @@
         </div>
       </div>
 
-      <div class="title2">Arrow</div>
-      <div class="container">
+      <div class="sub-title">Arrow</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in arrowIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -78,8 +78,8 @@
         </div>
       </div>
 
-      <div class="title2">Document</div>
-      <div class="container">
+      <div class="sub-title">Document</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in documentIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -88,8 +88,8 @@
         </div>
       </div>
 
-      <div class="title2">Media</div>
-      <div class="container">
+      <div class="sub-title">Media</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in mediaIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -98,8 +98,8 @@
         </div>
       </div>
 
-      <div class="title2">Traffic</div>
-      <div class="container">
+      <div class="sub-title">Traffic</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in trafficIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -108,8 +108,8 @@
         </div>
       </div>
 
-      <div class="title2">Food</div>
-      <div class="container">
+      <div class="sub-title">Food</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in foodIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -118,8 +118,8 @@
         </div>
       </div>
 
-      <div class="title2">Items</div>
-      <div class="container">
+      <div class="sub-title">Items</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in itemIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -128,8 +128,8 @@
         </div>
       </div>
 
-      <div class="title2">Weather</div>
-      <div class="container">
+      <div class="sub-title">Weather</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in weatherIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -138,8 +138,8 @@
         </div>
       </div>
 
-      <div class="title2">Other</div>
-      <div class="container">
+      <div class="sub-title">Other</div>
+      <div class="sub-container">
         <div class="icon-content" v-for="(item, index) in otherIcons" :key="index + ''">
           <el-card shadow="hover" class="box"
             ><el-icon size="30"><component :is="item.icon" /> </el-icon>
@@ -492,30 +492,33 @@ const otherIcons = [
   flex-direction: column;
   align-items: flex-start;
 }
-.icon-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 24px 0;
-  float: left;
-}
+
 .icon-content {
   margin: 0.5rem;
 }
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  overflow: auto;
-  flex-wrap: wrap;
-}
+
 .icon-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
   align-items: flex-start;
   justify-content: space-evenly;
+  .sub-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 24px 0;
+    float: left;
+  }
+  .sub-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: wrap;
+  }
 }
 .icon-box {
   width: 80px;
