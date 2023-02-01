@@ -2,10 +2,8 @@
   <div class="header">
     <div class="collapse-btn" @click="collapseMenu">
       <!-- <i-ep-menu class="icon" /> -->
-      <el-icon size="30">
-        <Fold />
-        <!-- <Expand /> -->
-      </el-icon>
+      <el-icon size="30" v-if="sidebar.collapse"><Expand /></el-icon>
+      <el-icon size="30" v-else><Fold /> </el-icon>
     </div>
     <div class="logo">后台管理系统</div>
     <div class="header-right">
@@ -47,16 +45,38 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue'
+import { useSidebarStore } from '~/store/sidebar'
+import { useRouter } from 'vue-router'
 import imgurl from '~/assets/img/avator.png'
+
 const username: string | null = localStorage.getItem('ms_username')
 const message: number = 2
 
+const sidebar = useSidebarStore()
+
+// 侧边栏菜单折叠展开
 const collapseMenu = () => {
-  console.log('collapseMenu')
+  // console.log('collapseMenu')
+  sidebar.handleCollapse()
 }
 
+onMounted(() => {
+  if (document.body.clientWidth < 1500) {
+    collapseMenu()
+  }
+})
+
+// 用户名下拉菜单选择事件
+const router = useRouter()
 const handleCommand = (command: string) => {
   console.log('handleCommand', command)
+  if (command == 'loginout') {
+    localStorage.removeItem('ms_username')
+    router.push('/login')
+  } else if (command == 'user') {
+    router.push('/user')
+  }
 }
 </script>
 
@@ -68,7 +88,7 @@ const handleCommand = (command: string) => {
   height: 70px;
   font-size: 1.5rem;
   color: white;
-  background-color: #2d8cf0;
+  background-color: #324157;
 }
 .collapse-btn {
   display: flex;
