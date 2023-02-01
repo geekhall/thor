@@ -1,7 +1,11 @@
 <template>
   <div class="header">
     <div class="collapse-btn" @click="collapseMenu">
-      <i-ep-menu class="icon" />
+      <!-- <i-ep-menu class="icon" /> -->
+      <el-icon size="30">
+        <Fold />
+        <!-- <Expand /> -->
+      </el-icon>
     </div>
     <div class="logo">后台管理系统</div>
     <div class="header-right">
@@ -59,70 +63,73 @@ const handleCommand = (command: string) => {
 <style lang="less" scoped>
 .header {
   position: relative;
-  box-sizing: 'border-box';
+  box-sizing: border-box;
   width: 100%;
   height: 70px;
   font-size: 1.5rem;
   color: white;
   background-color: #2d8cf0;
-  .collapse-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    float: left;
-    padding: 0 20px;
-    cursor: pointer;
-  }
-  .logo {
-    float: left;
-    line-height: 70px;
-    width: 200px;
-  }
-  .header-right {
-    float: right;
-    padding-right: 50px;
-    .header-user-con {
-      display: flex;
-      height: 70px;
-      align-items: center;
-      .btn-bell {
-        position: relative;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        border-radius: 15px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-
-        .btn-bell-badge {
-          position: absolute;
-          top: 0;
-          right: 4px;
-          width: 8px;
-          height: 8px;
-          border-radius: 4px;
-          background-color: red;
-          color: white;
-        }
-      }
-
-      .user-avator {
-        margin-left: 20px;
-      }
-    }
-  }
+}
+.collapse-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  float: left;
+  padding: 0 20px;
+  cursor: pointer;
+}
+.header .logo {
+  float: left;
+  line-height: 70px;
+  width: 250px;
+}
+.header-right {
+  float: right;
+  padding-right: 50px;
+}
+.header-user-con {
+  display: flex;
+  height: 70px;
+  align-items: center;
+}
+.btn-fullscreen {
+  transform: rotate(45deg);
+  margin-right: 5px;
+  font-size: 24px;
 }
 
-.header {
+.btn-bell,
+.btn-fullscreen {
   position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  height: 70px;
-  font-size: 22px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.btn-bell-badge {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #f56c6c;
+  color: white;
+}
+.btn-bell .el-icon-lx-notice {
   color: #fff;
 }
+.user-name {
+  margin-left: 10px;
+}
+.user-avator {
+  margin-left: 20px;
+}
+
 .collapse-btn {
   display: flex;
   justify-content: center;
@@ -139,7 +146,8 @@ const handleCommand = (command: string) => {
 }
 .header-right {
   float: right;
-  padding-right: 50px;
+  padding-right: 30px;
+  width: 120px;
 }
 .header-user-con {
   display: flex;
