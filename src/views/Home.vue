@@ -14,19 +14,9 @@
       </router-view>
     </div>
   </div>
-  <!-- <div class="content-box">
-    <div class="content">
-      <h1 class="home">Home</h1>
-      <hr />
-      <p>Home page</p>
-      <Counter />
-      <hr />
-    </div>
-  </div> -->
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, reactive } from 'vue'
 import mainStore from '~/store'
 import { useSidebarStore } from '~/store/sidebar'
 import { useTagsStore } from '~/store/tags'
@@ -35,13 +25,9 @@ import TheSidebar from '../components/layout/TheSidebar.vue'
 import VTags from '~/components/Tags.vue'
 
 const store = mainStore()
-const cnt = computed(() => store.count)
 const sidebar = useSidebarStore()
 const tags = useTagsStore()
 </script>
 
 <style lang="less" scoped>
-.home {
-  color: cyan;
-}
 </style>

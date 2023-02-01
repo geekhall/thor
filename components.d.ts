@@ -7,9 +7,12 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    403: typeof import('./src/views/403.vue')['default']
+    404: typeof import('./src/views/404.vue')['default']
     About: typeof import('./src/views/About.vue')['default']
     AxiosSample: typeof import('./src/views/AxiosSample.vue')['default']
     Counter: typeof import('./src/components/Counter.vue')['default']
+    Dashboard: typeof import('./src/views/Dashboard.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
@@ -17,6 +20,8 @@ declare module '@vue/runtime-core' {
     ElDropdown: typeof import('element-plus/es')['ElDropdown']
     ElDropdownItem: typeof import('element-plus/es')['ElDropdownItem']
     ElDropdownMenu: typeof import('element-plus/es')['ElDropdownMenu']
+    ElForm: typeof import('element-plus/es')['ElForm']
+    ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMenu: typeof import('element-plus/es')['ElMenu']
@@ -47,8 +52,10 @@ declare module '@vue/runtime-core' {
     IEpNotice: typeof import('~icons/ep/notice')['default']
     IEpSearch: typeof import('~icons/ep/search')['default']
     IEpUser: typeof import('~icons/ep/user')['default']
+    Login: typeof import('./src/views/Login.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Schart: typeof import('./src/components/Schart.vue')['default']
     SvgSample: typeof import('./src/views/SvgSample.vue')['default']
     Tags: typeof import('./src/components/Tags.vue')['default']
     TailwindSample: typeof import('./src/views/TailwindSample.vue')['default']
@@ -56,6 +63,7 @@ declare module '@vue/runtime-core' {
     TheHeader: typeof import('./src/components/layout/TheHeader.vue')['default']
     TheSidebar: typeof import('./src/components/layout/TheSidebar.vue')['default']
     UnoCssSample: typeof import('./src/views/UnoCssSample.vue')['default']
+    VueSchart: typeof import('./src/components/VueSchart.vue')['default']
     VueUseSample: typeof import('./src/views/VueUseSample.vue')['default']
   }
 }

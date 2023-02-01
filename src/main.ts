@@ -13,6 +13,7 @@ import { createPinia } from 'pinia'
 import { createI18n } from 'vue-i18n' // 引入vue-i18n，用于国际化
 import messages from "@intlify/unplugin-vue-i18n/messages";
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import { usePermissionStore } from '~/store/permission'
 import App from './App.vue'
 const app = createApp(App)
 
