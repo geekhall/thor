@@ -50,6 +50,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgSample: typeof import('./src/views/SvgSample.vue')['default']
+    Tags: typeof import('./src/components/Tags.vue')['default']
     TailwindSample: typeof import('./src/views/TailwindSample.vue')['default']
     TheFooter: typeof import('./src/components/layout/TheFooter.vue')['default']
     TheHeader: typeof import('./src/components/layout/TheHeader.vue')['default']

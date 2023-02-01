@@ -88,7 +88,7 @@ const handleCommand = (command: string) => {
   height: 70px;
   font-size: 1.5rem;
   color: white;
-  background-color: #324157;
+  background-color: #2c2e3a;
 }
 .collapse-btn {
   display: flex;

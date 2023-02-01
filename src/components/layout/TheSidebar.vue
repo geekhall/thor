@@ -64,7 +64,7 @@ import { useRoute } from 'vue-router'
 
 const items = [
   {
-    icon: 'Odometer',
+    icon: 'House',
     index: '/',
     title: '系统首页',
     permiss: '1'
@@ -152,6 +152,12 @@ const items = [
     permiss: '13'
   },
   {
+    icon: 'Odometer',
+    index: '/dashboard',
+    title: '仪表盘',
+    permiss: '15'
+  },
+  {
     icon: 'CoffeeCup',
     index: '/donate',
     title: '支持作者',
@@ -175,9 +181,9 @@ const sidebar = useSidebarStore()
   bottom: 0;
   overflow-y: scroll;
 }
-.sidebar-el-menu {
-  background-color: #324157;
-}
+// .sidebar-el-menu {
+//   background-color: #324157;
+// }
 .sidebar::-webkit-scrollbar {
   width: 0;
 }
