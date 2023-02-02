@@ -9,7 +9,7 @@ import { ElConfigProvider } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 @import './assets/css/main.css';
 @import './assets/css/color-dark.css';
 </style>

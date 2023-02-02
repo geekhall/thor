@@ -107,6 +107,7 @@ const handleCommand = (command: string) => {
 .header-right {
   float: right;
   padding-right: 50px;
+  width: 140px;
 }
 .header-user-con {
   display: flex;
