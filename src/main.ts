@@ -42,6 +42,16 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 
+// 自定义权限指令
+const permission = usePermissionStore();
+app.directive('permission', {
+  mounted(el, binding) {
+    if (!permission.key.includes(String(binding.value))) {
+      // el.parentNode.removeChild(el);
+      el['hidden'] = true;
+    }
+  },
+})
 //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
 // mount
 //_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/

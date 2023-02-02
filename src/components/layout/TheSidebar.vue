@@ -15,7 +15,7 @@
       <el-menu-item index="icon">icon</el-menu-item> -->
       <template v-for="item in items">
         <template v-if="item.subs">
-          <el-sub-menu :index="item.index" :key="item.index" v-permiss="item.permiss">
+          <el-sub-menu :index="item.index" :key="item.index" v-permission="item.permission">
             <template #title>
               <el-icon>
                 <component :is="item.icon"></component>
@@ -27,7 +27,7 @@
                 v-if="subItem.subs"
                 :index="subItem.index"
                 :key="subItem.index"
-                v-permiss="item.permiss"
+                v-permission="item.permission"
               >
                 <template #title>{{ subItem.title }}</template>
                 <el-menu-item
@@ -38,14 +38,14 @@
                   {{ threeItem.title }}
                 </el-menu-item>
               </el-sub-menu>
-              <el-menu-item v-else :index="subItem.index" v-permiss="item.permiss">
+              <el-menu-item v-else :index="subItem.index" v-permission="item.permission">
                 {{ subItem.title }}
               </el-menu-item>
             </template>
           </el-sub-menu>
         </template>
         <template v-else>
-          <el-menu-item :index="item.index" :key="item.index" v-permiss="item.permiss">
+          <el-menu-item :index="item.index" :key="item.index" v-permission="item.permission">
             <el-icon>
               <component :is="item.icon"></component>
             </el-icon>
@@ -67,28 +67,28 @@ const items = [
     icon: 'House',
     index: '/',
     title: '系统首页',
-    permiss: '1'
+    permission: '1'
   },
   {
     icon: 'Calendar',
     index: '1',
     title: '表格相关',
-    permiss: '2',
+    permission: '2',
     subs: [
       {
         index: '/table',
         title: '常用表格',
-        permiss: '2'
+        permission: '2'
       },
       {
         index: '/import',
         title: '导入Excel',
-        permiss: '2'
+        permission: '2'
       },
       {
         index: '/export',
         title: '导出Excel',
-        permiss: '2'
+        permission: '2'
       }
     ]
   },
@@ -96,38 +96,38 @@ const items = [
     icon: 'DocumentCopy',
     index: '/tabs',
     title: 'tab选项卡',
-    permiss: '3'
+    permission: '3'
   },
   {
     icon: 'Edit',
     index: '3',
     title: '表单相关',
-    permiss: '4',
+    permission: '4',
     subs: [
       {
         index: '/form',
         title: '基本表单',
-        permiss: '5'
+        permission: '5'
       },
       {
         index: '/upload',
         title: '文件上传',
-        permiss: '6'
+        permission: '6'
       },
       {
         index: '4',
         title: '三级菜单',
-        permiss: '7',
+        permission: '7',
         subs: [
           {
             index: '/editor',
             title: '富文本编辑器',
-            permiss: '8'
+            permission: '8'
           },
           {
             index: '/markdown',
             title: 'markdown编辑器',
-            permiss: '9'
+            permission: '9'
           }
         ]
       }
@@ -137,31 +137,31 @@ const items = [
     icon: 'Setting',
     index: '/icon',
     title: '自定义图标',
-    permiss: '10'
+    permission: '10'
   },
   {
     icon: 'PieChart',
     index: '/charts',
     title: 'schart图表',
-    permiss: '11'
+    permission: '11'
   },
   {
     icon: 'Warning',
     index: '/permission',
     title: '权限管理',
-    permiss: '13'
+    permission: '13'
   },
-  {
-    icon: 'Odometer',
-    index: '/dashboard',
-    title: '仪表盘',
-    permiss: '15'
-  },
+  // {
+  //   icon: 'Odometer',
+  //   index: '/dashboard',
+  //   title: '仪表盘',
+  //   permission: '15'
+  // },
   {
     icon: 'CoffeeCup',
     index: '/donate',
     title: '支持作者',
-    permiss: '14'
+    permission: '14'
   }
 ]
 const route = useRoute()

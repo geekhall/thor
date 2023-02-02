@@ -24,47 +24,47 @@ const routes: RouteRecordRaw[] = [
     path: '/', name: "home", component: Home, children: [
       {
         path: '/dashboard', name: "dashboard",
-        meta: { title: '首页', permiss: 'dashboard' },
+        meta: { title: '首页', permission: 'dashboard' },
         component: Dashboard
       },
       {
         path: '/about', name: "about",
-        meta: { title: '关于', permiss: 'about' },
+        meta: { title: '关于', permission: 'about' },
         component: About
       },
       {
         path: '/axios', name: "axiosSample",
-        meta: { title: 'axios', permiss: 'axios' },
+        meta: { title: 'axios', permission: 'axios' },
         component: AxiosSample
       },
       {
         path: '/vueuse', name: "vueuseSample",
-        meta: { title: 'vueuse', permiss: 'vueuse' },
+        meta: { title: 'vueuse', permission: 'vueuse' },
         component: VueUseSample
       },
       {
         path: '/i18n', name: "i18nSample",
-        meta: { title: 'i18n', permiss: 'i18n' },
+        meta: { title: 'i18n', permission: 'i18n' },
         component: I18nSample
       },
       {
         path: '/tailwind', name: "tailwindSample",
-        meta: { title: 'tailwind', permiss: 'tailwind' },
+        meta: { title: 'tailwind', permission: 'tailwind' },
         component: TailwindSample
       },
       {
         path: '/uno', name: "unoCssSample",
-        meta: { title: 'uno', permiss: 'uno' },
+        meta: { title: 'uno', permission: 'uno' },
         component: UnoCssSample
       },
       {
         path: '/icon', name: "iconSample",
-        meta: { title: 'icon', permiss: 'icon' },
+        meta: { title: 'icon', permission: 'icon' },
         component: IconSample
       },
       {
         path: '/svg', name: "svgSample",
-        meta: { title: 'svg', permiss: 'svg' },
+        meta: { title: 'svg', permission: 'svg' },
         component: SvgSample
       },
     ]
@@ -98,7 +98,7 @@ router.beforeEach((to, from, next) => {
   const permission = usePermissionStore();
   // if (!role && to.path !== '/login') {
   //   next('/login')
-  // } else if (to.meta.permiss && !permission.key.includes(to.meta.permiss)) {
+  // } else if (to.meta.permission && !permission.key.includes(to.meta.permission)) {
   //   // no permission, redirect to 403 page.
   //   next('/403')
   // } else {
