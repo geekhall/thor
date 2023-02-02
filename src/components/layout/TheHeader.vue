@@ -86,7 +86,7 @@ const handleCommand = (command: string) => {
   box-sizing: border-box;
   width: 100%;
   height: 70px;
-  font-size: 1.5rem;
+  font-size: 22px;
   color: white;
   background-color: #2c2e3a;
 }
@@ -96,7 +96,7 @@ const handleCommand = (command: string) => {
   align-items: center;
   height: 100%;
   float: left;
-  padding: 0 20px;
+  padding: 0 21px;
   cursor: pointer;
 }
 .header .logo {
@@ -139,66 +139,6 @@ const handleCommand = (command: string) => {
   border-radius: 4px;
   background-color: #f56c6c;
   color: white;
-}
-.btn-bell .el-icon-lx-notice {
-  color: #fff;
-}
-.user-name {
-  margin-left: 10px;
-}
-.user-avator {
-  margin-left: 20px;
-}
-
-.collapse-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  float: left;
-  padding: 0 21px;
-  cursor: pointer;
-}
-.header .logo {
-  float: left;
-  width: 250px;
-  line-height: 70px;
-}
-.header-right {
-  float: right;
-  padding-right: 30px;
-  width: 120px;
-}
-.header-user-con {
-  display: flex;
-  height: 70px;
-  align-items: center;
-}
-.btn-fullscreen {
-  transform: rotate(45deg);
-  margin-right: 5px;
-  font-size: 24px;
-}
-.btn-bell,
-.btn-fullscreen {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 15px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-.btn-bell-badge {
-  position: absolute;
-  right: 4px;
-  top: 0px;
-  width: 8px;
-  height: 8px;
-  border-radius: 4px;
-  background: #f56c6c;
-  color: #fff;
 }
 .btn-bell .el-icon-lx-notice {
   color: #fff;

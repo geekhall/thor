@@ -16,6 +16,7 @@ const IconSample = () => import('../views/IconSample.vue')
 const SvgSample = () => import('../views/SvgSample.vue')
 const Login = () => import('../views/Login.vue')
 const NoPermission = () => import('../views/403.vue')
+const Donate = () => import('../views/Donate.vue')
 
 // 2. Define some routes
 const routes: RouteRecordRaw[] = [
@@ -66,6 +67,11 @@ const routes: RouteRecordRaw[] = [
         path: '/svg', name: "svgSample",
         meta: { title: 'svg', permission: 'svg' },
         component: SvgSample
+      },
+      {
+        path: '/donate', name: "donate",
+        meta: { title: '捐助', permission: 'donate' },
+        component: Donate
       },
     ]
   },

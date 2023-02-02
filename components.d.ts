@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     AxiosSample: typeof import('./src/views/AxiosSample.vue')['default']
     Counter: typeof import('./src/components/Counter.vue')['default']
     Dashboard: typeof import('./src/views/Dashboard.vue')['default']
+    Donate: typeof import('./src/views/Donate.vue')['default']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']

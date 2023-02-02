@@ -10,9 +10,6 @@
       unique-opened
       router
     >
-      <!-- <el-menu-item index="unocss">unocss</el-menu-item>
-      <el-menu-item index="about">about</el-menu-item>
-      <el-menu-item index="icon">icon</el-menu-item> -->
       <template v-for="item in items">
         <template v-if="item.subs">
           <el-sub-menu :index="item.index" :key="item.index" v-permission="item.permission">
@@ -151,12 +148,6 @@ const items = [
     title: '权限管理',
     permission: '13'
   },
-  // {
-  //   icon: 'Odometer',
-  //   index: '/dashboard',
-  //   title: '仪表盘',
-  //   permission: '15'
-  // },
   {
     icon: 'CoffeeCup',
     index: '/donate',
@@ -181,9 +172,6 @@ const sidebar = useSidebarStore()
   bottom: 0;
   overflow-y: scroll;
 }
-// .sidebar-el-menu {
-//   background-color: #324157;
-// }
 .sidebar::-webkit-scrollbar {
   width: 0;
 }
