@@ -131,7 +131,7 @@ const items = [
     ]
   },
   {
-    icon: 'Setting',
+    icon: 'Help',
     index: '/icon',
     title: '自定义图标',
     permission: '10'
@@ -147,6 +147,24 @@ const items = [
     index: '/permission',
     title: '权限管理',
     permission: '13'
+  },
+  {
+    icon: 'Odometer',
+    index: '/dashboard',
+    title: '仪表盘',
+    permission: '15'
+  },
+  {
+    icon: 'Switch',
+    index: '/axios',
+    title: 'axios封装',
+    permission: '16'
+  },
+  {
+    icon: 'Location',
+    index: '/i18n',
+    title: '多语言切换',
+    permission: '17'
   },
   {
     icon: 'CoffeeCup',

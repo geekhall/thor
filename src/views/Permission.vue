@@ -1,11 +1,10 @@
 <template>
   <div class="container">
-    <h1>Dashboard</h1>
+    <h1>Permission</h1>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
 </script>
 
 <style lang="less" scoped>

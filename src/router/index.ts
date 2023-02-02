@@ -17,6 +17,22 @@ const SvgSample = () => import('../views/SvgSample.vue')
 const Login = () => import('../views/Login.vue')
 const NoPermission = () => import('../views/403.vue')
 const Donate = () => import('../views/Donate.vue')
+const Charts = () => import('../views/Charts.vue')
+const NotFound = () => import('../views/404.vue')
+const Error = () => import('../views/500.vue')
+const Lock = () => import('../views/Lock.vue')
+const Profile = () => import('../views/Profile.vue')
+const Setting = () => import('../views/Setting.vue')
+const Editor = () => import('../views/Editor.vue')
+const Markdown = () => import('../views/Markdown.vue')
+const Form = () => import('../views/Form.vue')
+const Table = () => import('../views/Table.vue')
+const Tabs = () => import('../views/Tabs.vue')
+const Import = () => import('../views/Import.vue')
+const Export = () => import('../views/Export.vue')
+const Permission = () => import('../views/Permission.vue')
+const Upload = () => import('../views/Upload.vue')
+
 
 // 2. Define some routes
 const routes: RouteRecordRaw[] = [
@@ -27,6 +43,71 @@ const routes: RouteRecordRaw[] = [
         path: '/dashboard', name: "dashboard",
         meta: { title: '首页', permission: 'dashboard' },
         component: Dashboard
+      },
+      {
+        path: '/lock', name: "lock",
+        meta: { title: '锁定', permission: 'lock' },
+        component: Lock
+      },
+      {
+        path: '/profile', name: "Profile",
+        meta: { title: 'Profile', permission: 'profile' },
+        component: Profile
+      },
+      {
+        path: '/setting', name: "setting",
+        meta: { title: '设置', permission: 'setting' },
+        component: Setting
+      },
+      {
+        path: '/editor', name: "editor",
+        meta: { title: '富文本编辑器', permission: 'editor' },
+        component: Editor
+      },
+      {
+        path: '/markdown', name: "markdown",
+        meta: { title: 'Markdown编辑器', permission: 'markdown' },
+        component: Markdown
+      },
+      {
+        path: '/form', name: "form",
+        meta: { title: '表单', permission: 'form' },
+        component: Form
+      },
+      {
+        path: '/table', name: "table",
+        meta: { title: '表格', permission: 'table' },
+        component: Table
+      },
+      {
+        path: '/tabs', name: "tabs",
+        meta: { title: 'Tabs', permission: 'tabs' },
+        component: Tabs
+      },
+      {
+        path: '/import', name: "import",
+        meta: { title: '导入', permission: 'import' },
+        component: Import
+      },
+      {
+        path: '/export', name: "export",
+        meta: { title: '导出', permission: 'export' },
+        component: Export
+      },
+      {
+        path: '/permission', name: "permission",
+        meta: { title: '权限', permission: 'permission' },
+        component: Permission
+      },
+      {
+        path: '/upload', name: "upload",
+        meta: { title: '上传', permission: 'upload' },
+        component: Upload
+      },
+      {
+        path: '/charts', name: "charts",
+        meta: { title: '图表', permission: 'charts' },
+        component: Charts
       },
       {
         path: '/about', name: "about",
@@ -45,7 +126,7 @@ const routes: RouteRecordRaw[] = [
       },
       {
         path: '/i18n', name: "i18nSample",
-        meta: { title: 'i18n', permission: 'i18n' },
+        meta: { title: '多语言', permission: 'i18n' },
         component: I18nSample
       },
       {
