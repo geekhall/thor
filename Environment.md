@@ -1044,6 +1044,19 @@ const onUploadImg = (files: any) => {
 
 ```
 
+## 17. 添加Excel导入导出功能
+
+### 17.1 安装
+
+```bash
+pnpm i xlsx
+```
+
+### 17.2 使用
+
+```vue
+
+```
 
 
 ### 启动环境
