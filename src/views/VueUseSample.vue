@@ -1,8 +1,10 @@
 <template>
-  <h1>VueUse Sample</h1>
-  <hr />
-  <p>vueuse sample page</p>
-  <hr />
+  <div class="container">
+    <h1>VueUse Sample</h1>
+    <hr />
+    <p>vueuse sample page</p>
+    <hr />
+  </div>
 </template>
 
 <script setup lang="ts">
