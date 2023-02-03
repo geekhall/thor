@@ -8,7 +8,7 @@
           accept=".xlsx, .xls"
           :show-file-list="false"
           :before-upload="beforeUpload"
-          :http-request="handleMany"
+          :http-request="handleImport"
         >
           <el-button class="mr10" type="success">批量导入</el-button>
         </el-upload>
@@ -94,7 +94,7 @@ const analysisExcel = (file: any) => {
   })
 }
 
-const handleMany = async () => {
+const handleImport = async () => {
   // 把数据传给服务器后获取最新列表，这里只是示例，不做请求
   const list = importList.value.map((item: any, index: number) => {
     return {
