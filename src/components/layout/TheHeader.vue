@@ -9,7 +9,7 @@
     <div class="header-right">
       <div class="header-user-con">
         <!-- 消息中心 -->
-        <div class="btn-bell">
+        <div class="btn-bell" @click="router.push('/tabs')">
           <el-tooltip
             effect="dark"
             :content="message ? `有${message}条未读消息` : `消息中心`"
@@ -18,27 +18,28 @@
             <el-icon size="30"><Bell /> </el-icon>
           </el-tooltip>
           <span class="btn-bell-badge" v-if="message"></span>
-          <!-- 用户头像 -->
-          <el-avatar class="user-avator" :size="30" :src="imgurl" />
-          <!-- 用户名下拉菜单 -->
-          <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-            <span class="el-dropdown-link">
-              {{ username }}
-              <el-icon class="el-icon--right">
-                <arrow-down />
-              </el-icon>
-            </span>
-            <template #dropdown>
-              <el-dropdown-menu>
-                <a href="https://github.com/geekhall/thor" target="_blank">
-                  <el-dropdown-item>项目仓库</el-dropdown-item>
-                </a>
-                <el-dropdown-item command="user">个人中心</el-dropdown-item>
-                <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
-              </el-dropdown-menu>
-            </template>
-          </el-dropdown>
         </div>
+        <!-- 用户头像 -->
+        <el-avatar class="user-avator" :size="30" :src="imgurl" />
+        <!-- 用户名下拉菜单 -->
+        <el-dropdown class="user-name" trigger="click" @command="handleCommand">
+          <span class="el-dropdown-link">
+            {{ username }}
+            <el-icon class="el-icon--right">
+              <arrow-down />
+            </el-icon>
+          </span>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <a href="https://github.com/geekhall/thor" target="_blank">
+                <el-dropdown-item>项目仓库</el-dropdown-item>
+              </a>
+              <el-dropdown-item command="profile">个人中心</el-dropdown-item>
+              <el-dropdown-item command="setting">设置</el-dropdown-item>
+              <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
       </div>
     </div>
   </div>
@@ -74,8 +75,10 @@ const handleCommand = (command: string) => {
   if (command == 'loginout') {
     localStorage.removeItem('ms_username')
     router.push('/login')
-  } else if (command == 'user') {
-    router.push('/user')
+  } else if (command == 'profile') {
+    router.push('/profile')
+  } else if (command == 'setting') {
+    router.push('/setting')
   }
 }
 </script>
@@ -107,7 +110,6 @@ const handleCommand = (command: string) => {
 .header-right {
   float: right;
   padding-right: 50px;
-  width: 140px;
 }
 .header-user-con {
   display: flex;

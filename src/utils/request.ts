@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
+import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
@@ -16,14 +16,14 @@ export function request(config: AxiosRequestConfig) {
   // 2. axios 的拦截器
   // 2.1 请求拦截的作用
   instance.interceptors.request.use(
-    (config) => {
+    (config: AxiosRequestConfig) => {
       const token = localStorage.getItem('token');
       if (token) {
         config.headers.Authorization = token;
       }
       return config;
     },
-    (err) => {
+    (err: AxiosError) => {
       console.log(err);
       return Promise.reject(err);
     }
@@ -31,10 +31,14 @@ export function request(config: AxiosRequestConfig) {
 
   // 2.2 响应拦截
   instance.interceptors.response.use(
-    (res) => {
-      return res.data;
+    (res: AxiosResponse) => {
+      if (res.status === 200) {
+        return res.data;
+      } else {
+        return Promise.reject(res);
+      }
     },
-    (err: any) => {
+    (err: AxiosError) => {
       if (err?.response) {
         switch (err.response.status) {
           case 400:
@@ -74,6 +78,7 @@ export function request(config: AxiosRequestConfig) {
             err.message = '未知错误';
             break;
         }
+        console.log(err.message);
         return Promise.reject(err);
       } else {
         if (err.message.includes('timeout')) {
@@ -82,12 +87,10 @@ export function request(config: AxiosRequestConfig) {
         if (err.message.includes('Network Error')) {
           err.message = '网络错误';
         }
+        console.log(err.message)
         return Promise.reject(err);
       }
-      console.log(err);
     }
   )
-
-
   return instance(config);
 }
