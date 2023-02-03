@@ -1016,6 +1016,34 @@ const syncHTML = () => {
 
 ```
 
+## 16. 集成md-editor-v3 版本的Markdown编辑器
+
+### 16.1 安装
+
+```bash
+pnpm i md-editor-v3
+```
+
+## 16.2 使用
+
+```vue
+<template>
+  <md-editor class="mgb20" v-model="text" @on-upload-img="onUploadImg" />
+</template>
+
+<script setup lang="ts" name="md">
+import { ref } from 'vue'
+import MdEditor from 'md-editor-v3'
+import 'md-editor-v3/lib/style.css'
+
+const text = ref('Hello Editor!')
+const onUploadImg = (files: any) => {
+  console.log(files)
+}
+</script>
+
+```
+
 
 
 ### 启动环境

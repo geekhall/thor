@@ -62,6 +62,7 @@ declare module '@vue/runtime-core' {
     Lock: typeof import('./src/views/Lock.vue')['default']
     Login: typeof import('./src/views/Login.vue')['default']
     Markdown: typeof import('./src/views/Markdown.vue')['default']
+    MarkdownEditor: typeof import('./src/components/MarkdownEditor.vue')['default']
     Permission: typeof import('./src/views/Permission.vue')['default']
     Profile: typeof import('./src/views/Profile.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -13,6 +13,7 @@ specifiers:
   element-plus: ^2.2.28
   eslint: ^8.32.0
   less: ^4.1.3
+  md-editor-v3: ^2.7.2
   normalize.css: ^8.0.1
   pinia: ^2.0.29
   postcss: ^8.4.21
@@ -39,6 +40,7 @@ dependencies:
   '@element-plus/icons-vue': 2.0.10_vue@3.2.45
   '@intlify/unplugin-vue-i18n': 0.8.1_vue-i18n@9.2.2
   axios: 1.2.3
+  md-editor-v3: 2.7.2
   pinia: 2.0.29_typescript@4.9.4+vue@3.2.45
   vite-svg-loader: 4.0.0
   vue: 3.2.45
@@ -2057,6 +2059,11 @@ packages:
       semver: 5.7.1
     dev: true
     optional: true
+
+  /md-editor-v3/2.7.2:
+    resolution: {integrity: sha512-CyLG7yZhMyKplXO/MYIccpL0AOcnys74cMpbBG77rmXWlANAmzLrznUU++g6MohTv3DCRNTz+5Uh/w9h9P2sSA==}
+    engines: {node: '>=12.0.0'}
+    dev: false
 
   /mdn-data/2.0.28:
     resolution: {integrity: sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==}
