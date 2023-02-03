@@ -16,7 +16,8 @@
     "vite-svg-loader": "^4.0.0",
     "vue": "^3.2.45",
     "vue-i18n": "9",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "wangeditor": "^4.7.15"
   },
   "devDependencies": {
     "@iconify-json/ep": "^1.1.8",
