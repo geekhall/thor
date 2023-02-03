@@ -53,6 +53,7 @@ declare module '@vue/runtime-core' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
+    ElUpload: typeof import('element-plus/es')['ElUpload']
     Export: typeof import('./src/views/Export.vue')['default']
     Footer: typeof import('./src/components/layout/Footer.vue')['default']
     Form: typeof import('./src/views/Form.vue')['default']
