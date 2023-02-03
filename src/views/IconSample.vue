@@ -472,6 +472,42 @@ const otherIcons = [
 ]
 </script>
 <style lang="less" scoped>
-@import '~/assets/css/icon-sample.less';
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 24px 0;
+  float: left;
+}
+
+.sub-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  flex-wrap: wrap;
+}
+
+.icon-content {
+  margin: 0.5rem;
+}
+
+.box {
+  min-width: 100px;
+  text-align: center;
+}
+.icon-name {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
 </style>
 

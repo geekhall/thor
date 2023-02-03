@@ -121,7 +121,7 @@ export default defineConfig({
     }),
   ],
   server: {
-    port: 3000,
+    port: 4000,
     // open: true, // 自动打开浏览器
     hmr: true,  // 热模块替换
     base: './', // 生产环境下的公共路径

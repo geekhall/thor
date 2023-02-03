@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-export function request(config: AxiosRequestConfig) {
+export default function request(config: AxiosRequestConfig) {
 
   // 1. 创建 axios 实例
   const instance = axios.create({
@@ -33,6 +33,7 @@ export function request(config: AxiosRequestConfig) {
   instance.interceptors.response.use(
     (res: AxiosResponse) => {
       if (res.status === 200) {
+        console.log(res.data);
         return res.data;
       } else {
         return Promise.reject(res);
