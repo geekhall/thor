@@ -125,10 +125,14 @@ const tableData = ref<TableItem[]>([])
 const pageTotal = ref(0)
 // 获取表格数据
 const getData = () => {
-  getHeraData('/teacher/all').then((res) => {
-    tableData.value = res.data.items
-    pageTotal.value = res.data.pageTotal || 50
-  })
+  getHeraData('/teacher/all')
+    .then((res) => {
+      tableData.value = res.data.items
+      pageTotal.value = res.data.pageTotal || 50
+    })
+    .catch((err) => {
+      ElMessage.error(err)
+    })
 }
 getData()
 
