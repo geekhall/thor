@@ -278,7 +278,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-export function request(config: AxiosRequestConfig) {
+export default function request(config: AxiosRequestConfig) {
 
   // 1. 创建 axios 实例
   const instance = axios.create({
@@ -374,7 +374,7 @@ export function request(config: AxiosRequestConfig) {
 
 ```ts
 server: {
-    port: 3000,
+    port: 4000,
     open: true, // 自动打开浏览器
     hmr: true,  // 热模块替换
     base: './', // 生产环境下的公共路径
@@ -393,20 +393,24 @@ server: {
 在组件或者ts中使用Axios：
 
 ```ts
-import axios from "axios";
+export const getHeraData = (api_url: string) => {
+  return request({
+    url: api_url,
+    method: MethodType.GET
+  } as AxiosRequestConfig)
+}
 
-const getProducts = async () => {
-  const result = await axios({
-    method: "GET",
-    url: "/api/environment/all",
-  })
-    .then((res: any) => {
-      envs.value = JSON.parse(JSON.stringify(res.data));
+// 获取表格数据
+const getData = () => {
+  getHeraData('/teacher/all')
+    .then((res) => {
+      tableData.value = res.data.items
+      pageTotal.value = res.data.pageTotal || 50
     })
-    .catch((err: any) => {
-      console.log(err.message);
-    });
-};
+    .catch((err) => {
+      ElMessage.error(err)
+    })
+}
 ```
 
 ## 6. 安装及配置vue-i18n，添加国际化支持
@@ -1046,18 +1050,17 @@ const onUploadImg = (files: any) => {
 
 ## 17. 添加Excel导入导出功能
 
-### 17.1 安装
-
 ```bash
 pnpm i xlsx
 ```
 
-### 17.2 使用
+## 18. 添加vue-cropperjs图片裁剪功能
 
-```vue
-
+```bash
+pnpm i --save-dev @types/vue-cropperjs
 ```
 
+```
 
 ### 启动环境
 
