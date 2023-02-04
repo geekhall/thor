@@ -101,7 +101,7 @@
 </template>
 
 <script setup lang="ts" name="basetable">
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import { Delete, Edit, Search, Plus } from '@element-plus/icons-vue'
 import { getHeraData } from '../api/index'
@@ -134,7 +134,9 @@ const getData = () => {
       ElMessage.error(err)
     })
 }
-getData()
+onMounted(() => {
+  getData()
+})
 
 // 查询操作
 const handleSearch = () => {

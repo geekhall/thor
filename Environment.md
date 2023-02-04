@@ -1060,7 +1060,59 @@ pnpm i xlsx
 pnpm i --save-dev @types/vue-cropperjs
 ```
 
+## 19 添加chart.js图表功能
+
+```bash
+pnpm i vue-chartjs chart.js
 ```
+
+### 19.1 使用
+
+```vue
+<template>
+  <div class="container">
+    <h1>Charts</h1>
+    <Bar :data="data" :options="options" />
+    <hr />
+    <Bar :data="bar_data" :options="bar_options" />
+    <hr />
+    <Bubble :data="bubble_data" :options="bubble_options" />
+  </div>
+</template>
+
+<script lang="ts" setup>
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
+} from 'chart.js'
+import { Bar } from 'vue-chartjs'
+import { reactive } from 'vue'
+
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
+
+const data = {
+  loaded: false,
+  labels: ['January', 'February', 'March'],
+  datasets: [
+    {
+      label: 'Data One',
+      backgroundColor: '#345678',
+      data: [40, 20, 12]
+    }
+  ]
+}
+const options = {
+  responsive: true
+}
+</script>
+
+```
+
 
 ### 启动环境
 
