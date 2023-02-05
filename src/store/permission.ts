@@ -11,7 +11,7 @@ export const usePermissionStore = defineStore('permission', {
       key: keys ? JSON.parse(keys) : <string[]>[],
       defaultList: <ObjectList>{
         admin: [
-          'dashboard', 'table', 'import', 'export', 'tabs', 'form', 'upload', 'menu', 'editor', 'markdown', 'icon', 'charts', 'permission', 'axios', 'i18n', 'donate'
+          'dashboard', 'table', 'import', 'export', 'tabs', 'form', 'upload', 'menu', 'editor', 'markdown', 'icon', 'charts', 'permission', 'axios', 'i18n', 'donate', '15', '16'
         ],
         user: ['dashboard', 'table', 'import', 'export', 'icon', 'charts', 'permission', 'axios', 'i18n', 'donate']
       }
