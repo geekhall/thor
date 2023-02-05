@@ -1,8 +1,20 @@
 <template>
   <div class="content-container">
-    <h1>Axios Sample Page</h1>
-    <el-button class="btn" type="primary" @click="clearProducts">清空数据</el-button>
-    <el-button class="btn" type="primary" @click="getProducts">获取数据</el-button>
+    <div class="plugins-tips">
+      <h1>Axios Sample Page</h1>
+      <el-card>
+        <div>
+          这是一个前后端通信的示例页面，对应的后端工程是：<a
+            href="https://github.com/geekhall/hera"
+            target="_blank"
+            >hera</a
+          >
+        </div>
+      </el-card>
+      <el-button class="btn" type="primary" @click="clearProducts">清空数据</el-button>
+      <el-button class="btn" type="primary" @click="getProducts">获取数据</el-button>
+    </div>
+
     <hr />
     <div class="data-container">
       <div class="content">
