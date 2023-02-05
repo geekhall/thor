@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <div class="text-36px text-#ff6700">UnoCss Sample</div>
     <hr />
     <p>unocss sample page</p>

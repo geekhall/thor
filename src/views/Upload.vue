@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <div class="content-title">支持拖拽</div>
     <div class="plugins-tips">
       Element Plus自带上传组件。 访问地址：

@@ -956,7 +956,7 @@ pnpm i wangeditor
 ### 15.2 使用
 ```vue
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Editor</h1>
     <hr />
     <div class="plugins-tips">
@@ -1070,7 +1070,7 @@ pnpm i vue-chartjs chart.js
 
 ```vue
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Charts</h1>
     <Bar :data="data" :options="options" />
     <hr />

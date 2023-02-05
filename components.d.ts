@@ -89,6 +89,8 @@ declare module '@vue/runtime-core' {
     Markdown: typeof import('./src/views/Markdown.vue')['default']
     MarkdownEditor: typeof import('./src/components/MarkdownEditor.vue')['default']
     Permission: typeof import('./src/views/Permission.vue')['default']
+    PieChart: typeof import('./src/components/charts/PieChart.vue')['default']
+    PolarAreaChart: typeof import('./src/components/charts/PolarAreaChart.vue')['default']
     Profile: typeof import('./src/views/Profile.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

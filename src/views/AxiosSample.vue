@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Axios Sample Page</h1>
     <el-button class="btn" type="primary" @click="clearProducts">清空数据</el-button>
     <el-button class="btn" type="primary" @click="getProducts">获取数据</el-button>

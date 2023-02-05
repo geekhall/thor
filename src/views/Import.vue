@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="content-container">
       <div class="handle-box">
         <el-upload
           action="#"

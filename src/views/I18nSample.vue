@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1 class="home">{{ $t('sitename') }}</h1>
     <hr />
     <p>{{ $t('header.content') }}</p>

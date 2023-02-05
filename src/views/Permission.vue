@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <div class="plugins-tips">
       通过 v-permission 自定义指令实现权限管理，使用非 admin 账号登录，可查看效果。
     </div>

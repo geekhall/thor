@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <div class="form-box">
       <el-form ref="formRef" :rules="rules" :model="form" label-width="80px">
         <el-form-item label="表单名称" prop="name">

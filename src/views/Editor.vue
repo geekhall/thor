@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Editor</h1>
     <hr />
     <div class="plugins-tips">

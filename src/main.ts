@@ -5,7 +5,7 @@ import { createApp } from 'vue'
 import Vue from 'vue'
 import 'normalize.css/normalize.css'  // 重置样式 这里引入自定义的重置样式也可
 import './style.css'                  // 项目内的样式，最好放在重置样式后，uno.css前
-import './tailwind.css'
+import './tailwind.css'               // TailwindCSS
 import 'uno.css'                      // UnoCSS
 import router, { setupRouter } from './router'  // 引入路由
 import store from './store'           // 引入Pinia

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="content-container">
       <div class="handle-box">
         <el-select v-model="query.career" placeholder="职业" class="handle-select mr10">
           <el-option key="1" label="前端" value="前端"></el-option>

@@ -1,6 +1,6 @@
 
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>About</h1>
     <hr />
     <p>About page</p>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Lock</h1>
   </div>
 </template>

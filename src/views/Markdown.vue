@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <div class="plugins-tips">
       md-editor-v3：vue3版本的 markdown 编辑器，配置丰富，请详看文档。 访问地址：
       <a href="https://imzbf.github.io/md-editor-v3/index" target="_blank">md-editor-v3</a>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>Iconify Sample</h1>
     <hr />
     <div class="title2">1. Use Iconify</div>

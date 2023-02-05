@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>TailwindCSS Sample</h1>
     <hr />
     <button class="bg-red-500 hover:bg-red-700 ...">Hover me</button>

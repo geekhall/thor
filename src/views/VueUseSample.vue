@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content-container">
     <h1>VueUse Sample</h1>
     <hr />
     <p>vueuse sample page</p>
