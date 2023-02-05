@@ -165,7 +165,12 @@ const routes: RouteRecordRaw[] = [
     path: '/403', name: "403",
     meta: { title: '没有权限' },
     component: NoPermission
-  }
+  },
+  {
+    path: '/:pathMatch(.*)*', name: "404",
+    meta: { title: '404' },
+    component: NotFound
+  },
 
 ]
 
