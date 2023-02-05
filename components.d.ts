@@ -97,6 +97,7 @@ declare module '@vue/runtime-core' {
     RandomChart: typeof import('./src/components/charts/RandomChart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ScatterChart: typeof import('./src/components/charts/ScatterChart.vue')['default']
     Schart: typeof import('./src/components/Schart.vue')['default']
     Setting: typeof import('./src/views/Setting.vue')['default']
     SvgSample: typeof import('./src/views/SvgSample.vue')['default']

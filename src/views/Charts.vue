@@ -44,6 +44,11 @@
       <div class="content-title">随机图</div>
       <random-chart class="chart" />
     </div>
+
+    <div class="chart-box">
+      <div class="content-title">散点图</div>
+      <scatter-chart class="chart" />
+    </div>
   </div>
 </template>
 
