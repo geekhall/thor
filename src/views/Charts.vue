@@ -29,6 +29,11 @@
       <div class="content-title">折线图</div>
       <line-chart class="chart" />
     </div>
+
+    <div class="chart-box">
+      <div class="content-title">极地图</div>
+      <polar-area-chart class="chart" />
+    </div>
   </div>
 </template>
 
