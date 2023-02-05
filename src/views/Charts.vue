@@ -5,6 +5,7 @@
     <bar-chart />
     <bubble-chart />
     <doughnut-chart />
+    <line-chart />
   </div>
 </template>
 

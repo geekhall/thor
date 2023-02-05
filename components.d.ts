@@ -83,6 +83,7 @@ declare module '@vue/runtime-core' {
     IEpSearch: typeof import('~icons/ep/search')['default']
     IEpUser: typeof import('~icons/ep/user')['default']
     Import: typeof import('./src/views/Import.vue')['default']
+    LineChart: typeof import('./src/components/charts/LineChart.vue')['default']
     Lock: typeof import('./src/views/Lock.vue')['default']
     Login: typeof import('./src/views/Login.vue')['default']
     Markdown: typeof import('./src/views/Markdown.vue')['default']
