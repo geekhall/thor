@@ -69,7 +69,7 @@
           <template #header>
             <div class="clearfix">
               <span>待办事项</span>
-              <el-button style="float: right; padding: 3px 0" text>添加</el-button>
+              <el-button type="primary" style="float: right; padding: 3px 0" text>添加</el-button>
             </div>
           </template>
           <el-table :show-header="false" :data="todoList" style="width: 100%">
@@ -113,27 +113,31 @@ const role: string = name === 'admin' ? '超级管理员' : '普通用户'
 
 const todoList = reactive([
   {
-    title: '今天要修复100个bug',
+    title: '前后端登录功能整合',
     status: false
   },
   {
-    title: '今天要修复100个bug',
+    title: '添加dark-mode主题切换',
     status: false
   },
   {
-    title: '今天要写100行代码加几个bug吧',
+    title: '整合移动端UI',
     status: false
   },
   {
-    title: '今天要修复100个bug',
+    title: '添加响应式布局优化',
     status: false
   },
   {
-    title: '今天要修复100个bug',
+    title: '完成前台系统基本功能',
+    status: false
+  },
+  {
+    title: '完成后台管理系统前端基本功能',
     status: true
   },
   {
-    title: '今天要写100行代码加几个bug吧',
+    title: '完成服务端系统框架和基本功能',
     status: true
   }
 ])

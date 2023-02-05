@@ -94,7 +94,7 @@ const data: Tree[] = [
   },
   {
     id: '11',
-    label: 'schart图表'
+    label: 'chart图表'
   },
 
   {

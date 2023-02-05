@@ -183,15 +183,14 @@ router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Thor-System`
   const role = localStorage.getItem('ms_username')
   const permission = usePermissionStore();
-  // if (!role && to.path !== '/login') {
-  //   next('/login')
-  // } else if (to.meta.permission && !permission.key.includes(to.meta.permission)) {
-  //   // no permission, redirect to 403 page.
-  //   next('/403')
-  // } else {
-  //   next()
-  // }
-  next()
+  if (!role && to.path !== '/login') {
+    next('/login')
+  } else if (to.meta.permission && !permission.key.includes(to.meta.permission)) {
+    // no permission, redirect to 403 page.
+    next('/403')
+  } else {
+    next()
+  }
 })
 export function setupRouter(app: App<Element>) {
   app.use(router)

@@ -64,28 +64,28 @@ const items = [
     icon: 'House',
     index: '/',
     title: '系统首页',
-    permission: '1'
+    permission: 'dashboard'
   },
   {
     icon: 'Calendar',
     index: '1',
     title: '表格相关',
-    permission: '2',
+    permission: 'table',
     subs: [
       {
         index: '/table',
         title: '常用表格',
-        permission: '2'
+        permission: 'table'
       },
       {
         index: '/import',
         title: '导入Excel',
-        permission: '2'
+        permission: 'import'
       },
       {
         index: '/export',
         title: '导出Excel',
-        permission: '2'
+        permission: 'export'
       }
     ]
   },
@@ -93,38 +93,38 @@ const items = [
     icon: 'DocumentCopy',
     index: '/tabs',
     title: 'tab选项卡',
-    permission: '3'
+    permission: 'tabs'
   },
   {
     icon: 'Edit',
     index: '3',
     title: '表单相关',
-    permission: '4',
+    permission: 'form',
     subs: [
       {
         index: '/form',
         title: '基本表单',
-        permission: '5'
+        permission: 'form'
       },
       {
         index: '/upload',
         title: '文件上传',
-        permission: '6'
+        permission: 'upload'
       },
       {
         index: '4',
         title: '三级菜单',
-        permission: '7',
+        permission: 'menu',
         subs: [
           {
             index: '/editor',
             title: '富文本编辑器',
-            permission: '8'
+            permission: 'editor'
           },
           {
             index: '/markdown',
             title: 'markdown编辑器',
-            permission: '9'
+            permission: 'markdown'
           }
         ]
       }
@@ -134,43 +134,37 @@ const items = [
     icon: 'Help',
     index: '/icon',
     title: '自定义图标',
-    permission: '10'
+    permission: 'icon'
   },
   {
     icon: 'PieChart',
     index: '/charts',
-    title: 'schart图表',
-    permission: '11'
+    title: 'chart图表',
+    permission: 'charts'
   },
   {
     icon: 'Warning',
     index: '/permission',
     title: '权限管理',
-    permission: '13'
-  },
-  {
-    icon: 'Odometer',
-    index: '/dashboard',
-    title: '仪表盘',
-    permission: '15'
+    permission: 'permission'
   },
   {
     icon: 'Switch',
     index: '/axios',
     title: 'axios封装',
-    permission: '16'
+    permission: 'axios'
   },
   {
     icon: 'Location',
     index: '/i18n',
     title: '多语言切换',
-    permission: '17'
+    permission: 'i18n'
   },
   {
     icon: 'CoffeeCup',
     index: '/donate',
     title: '支持作者',
-    permission: '14'
+    permission: 'donate'
   }
 ]
 const route = useRoute()
