@@ -5,6 +5,7 @@
       <a href="https://vue-chartjs.org/" target="_blank">vue-chartjs</a>
     </div>
     <hr />
+
     <div class="chart-box">
       <div class="content-title">柱状图</div>
       <bar-chart class="chart" />
@@ -41,13 +42,13 @@
     </div>
 
     <div class="chart-box">
-      <div class="content-title">随机图</div>
-      <random-chart class="chart" />
+      <div class="content-title">散点图</div>
+      <scatter-chart class="chart" />
     </div>
 
     <div class="chart-box">
-      <div class="content-title">散点图</div>
-      <scatter-chart class="chart" />
+      <div class="content-title">响应式随机图示例</div>
+      <random-chart class="chart" />
     </div>
   </div>
 </template>

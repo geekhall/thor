@@ -20,7 +20,7 @@
           <span class="btn-bell-badge" v-if="message"></span>
         </div>
         <!-- 用户头像 -->
-        <el-avatar class="user-avator" :size="30" :src="imgurl" />
+        <el-avatar class="user-avatar" :size="30" :src="imgurl" />
         <!-- 用户名下拉菜单 -->
         <el-dropdown class="user-name" trigger="click" @command="handleCommand">
           <span class="el-dropdown-link">
@@ -49,7 +49,7 @@
 import { onMounted } from 'vue'
 import { useSidebarStore } from '~/store/sidebar'
 import { useRouter } from 'vue-router'
-import imgurl from '~/assets/img/avator.png'
+import imgurl from '~/assets/img/avatar.png'
 
 const username: string | null = localStorage.getItem('ms_username')
 const message: number = 2
@@ -149,7 +149,7 @@ const handleCommand = (command: string) => {
 .user-name {
   margin-left: 10px;
 }
-.user-avator {
+.user-avatar {
   margin-left: 20px;
 }
 .el-dropdown-link {

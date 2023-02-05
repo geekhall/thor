@@ -78,7 +78,7 @@
 import { reactive, ref } from 'vue'
 import VueCropper from 'vue-cropperjs'
 import 'cropperjs/dist/cropper.css'
-import avatar from '../assets/img/avator.png'
+import avatar from '../assets/img/avatar.png'
 
 const name = localStorage.getItem('ms_username')
 const form = reactive({
