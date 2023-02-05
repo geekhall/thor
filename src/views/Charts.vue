@@ -34,6 +34,16 @@
       <div class="content-title">极地图</div>
       <polar-area-chart class="chart" />
     </div>
+
+    <div class="chart-box">
+      <div class="content-title">雷达图</div>
+      <radar-chart class="chart" />
+    </div>
+
+    <div class="chart-box">
+      <div class="content-title">随机图</div>
+      <random-chart class="chart" />
+    </div>
   </div>
 </template>
 
