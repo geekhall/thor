@@ -1,4 +1,4 @@
-import { Locales } from './locales';
+import { Locales } from '~/utils/types';
 
 import en from './en.json';
 import cn from './cn.json';

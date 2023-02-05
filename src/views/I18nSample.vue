@@ -1,9 +1,13 @@
 <template>
   <div class="content-container">
-    <h1 class="home">{{ $t('sitename') }}</h1>
-    <hr />
-    <p>{{ $t('header.content') }}</p>
-    <hr />
+    <div class="plugins-tips">
+      <h1 class="home">{{ $t('sitename') }}</h1>
+      <el-card>
+        <div>{{ $t('header.content') }}</div>
+        <div>{{ $t('header.description') }}</div>
+      </el-card>
+    </div>
+
     <el-select v-model="$i18n.locale">
       <el-option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">
         {{ lang }}
@@ -17,7 +21,4 @@ const langs = ['cn', 'en']
 </script>
 
 <style lang="less" scoped>
-.home {
-  color: cyan;
-}
 </style>
